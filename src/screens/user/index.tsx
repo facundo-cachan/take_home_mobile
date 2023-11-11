@@ -3,32 +3,31 @@
 import { useEffect, useState } from 'react';
 import { Button, Text } from 'react-native';
 
-import CommitAPI from '../../hooks/commitAPI';
+import UserAPI from '../../hooks/userAPI';
 import ScreenTemplate from '../../layouts/default';
 
 import type { FC } from 'react';
 import type { NavigatorProps } from '../../../App';
 
-const CommitScreen: FC<NavigatorProps> = ({ navigation }: NavigatorProps) => {
-  const owner = 'facundo-cachan'
-  const repo = 'challenge-simple_solutions'
+const UserScreen: FC<NavigatorProps> = ({ navigation }: NavigatorProps) => {
+  const user = 'facundo-cachan'
   const [isLoading, setLoader] = useState<boolean>(true)
-  const [commits, setCommits] = useState()
+  const [info, setInfo] = useState()
 
   useEffect(() => {
 
-    CommitAPI.getAll({ owner, repo })
-      .then((data) => setCommits(data))
+    UserAPI.getInfo(user)
+      .then((data) => setInfo(data))
       .finally(() => setLoader(!isLoading))
 
   }, [])
 
   return (
     <ScreenTemplate loading={isLoading}>
-      <Button title="Go to User" onPress={() => navigation.navigate('UserScreen')} />
-      <Text>{JSON.stringify(commits, null, 2)}</Text>
+      <Button title="Go to Commits" onPress={() => navigation.navigate('CommitScreen')} />
+      <Text>{JSON.stringify(info, null, 2)}</Text>
     </ScreenTemplate>
   );
 };
 
-export default CommitScreen;
+export default UserScreen;
