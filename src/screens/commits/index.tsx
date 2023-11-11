@@ -26,7 +26,7 @@ const CommitScreen: FC<NavigatorProps> = ({ navigation }: NavigatorProps) => {
   return (
     <ScreenTemplate loading={isLoading}>
       <Button title="Go to User" onPress={() => navigation.navigate('UserScreen')} />
-      <Text>{JSON.stringify(commits, null, 2)}</Text>
+      <Text className="text-red-600">{JSON.stringify(commits, null, 2)}</Text>
     </ScreenTemplate>
   );
 };
