@@ -39,6 +39,10 @@ local.properties
 node_modules/
 npm-debug.log
 yarn-error.log
+.env
+.env.local
+.env.test.local
+.env.development.local
 
 # fastlane
 #
@@ -61,6 +65,9 @@ yarn-error.log
 
 # Temporary files created by Metro to check the health of the file watcher
 .metro-health-check*
+*.pem
+*.aab
 
 # testing
 /coverage
+.jest/**/*
