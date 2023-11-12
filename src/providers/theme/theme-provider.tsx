@@ -27,7 +27,7 @@ export function ThemeProvider({ children }: ThemeProviderProps): JSX.Element {
   const [isDark, setSwitchTheme] = useRecoilState<Theme['dark']>(switchThemeAtom);
 
   useEffect(() => {
-    setColors((isDark || colorScheme) ? DarkTheme : DefaultTheme)
+    setColors((isDark && colorScheme) ? DarkTheme : DefaultTheme)
   }, [isDark, colorScheme])
 
   const toggleSwitch: () => void = () => {
