@@ -13,7 +13,7 @@ const Row: FC<CommitProps> = ({ repo, owner, commit: {
   const { isLandscape } = useOrientation()
 
   return (
-    <View>
+    <View className={styles.container}>
       <Text className={styles.author}>{author.date} - {author.name}</Text>
       <Text className={styles.commit} onPress={
         () => openURL(`https://github.com/${owner}/${repo}/commit/${sha}`)}>

@@ -1,15 +1,13 @@
-
 /**
  * Home Stack Navigator
  *
  * @format
  */
 
-import { Group, Screen } from './';
-
 import CommitScreen from '@screens/commits';
 import UserScreen from '@screens/user';
-import { screenOptions } from './header-screen';
+import { Group, Screen } from './';
+import { groupOptions, screenOptions } from './header-screen';
 
 const screens = [
   {
@@ -21,11 +19,10 @@ const screens = [
     name: 'UserScreen'
   }
 ]
-
 const HomeStack = () => (
-  <Group navigationKey="HomeStack">
+  <Group navigationKey="HomeStack" screenOptions={groupOptions}>
     {screens.map((props) => (
-      <Screen key={props.name} {...props} options={screenOptions} />
+      <Screen key={props.name} options={screenOptions} {...props} />
     ))}
   </Group>
 )
