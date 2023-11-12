@@ -5,14 +5,15 @@ import type { FC } from 'react';
 import type { TextStyle } from 'react-native';
 
 type Props = {
+  color?: string
   icon: string
   iconSize?: number
   style?: TextStyle
   onPress: () => void
 }
-const WithoutFeedback: FC<Props> = ({ style, icon, iconSize, onPress }): JSX.Element => (
+const WithoutFeedback: FC<Props> = ({ color, style, icon, iconSize, onPress }): JSX.Element => (
   <TouchableWithoutFeedback onPress={onPress}>
-    <Icon name={icon} size={iconSize ?? 20} style={style} />
+    <Icon name={icon} size={iconSize ?? 20} style={style} color={color}/>
   </TouchableWithoutFeedback>
 )
 

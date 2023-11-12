@@ -3,9 +3,8 @@ import Icon from 'react-native-vector-icons/FontAwesome'
 
 import { ButtonWithoutFeedback } from '@components'
 import openURL from "@hooks/openURL"
-import { iconSize } from '.'
-
 import { useThemeProvider } from '@providers/theme/theme-provider'
+import { iconSize } from '.'
 import styles from './styles'
 
 const rootHeaderRight = () => {
