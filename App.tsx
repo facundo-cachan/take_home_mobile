@@ -1,18 +1,24 @@
-import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { SafeAreaProvider } from 'react-native-safe-area-context'
+import { RecoilRoot } from 'recoil'
 
-import RootNavigator from './src/providers/navigators';
+import RootNavigator from '@providers/navigators'
+import { ThemeProvider } from '@providers/theme/theme-provider'
 
-import 'react-native-gesture-handler';
+import 'react-native-gesture-handler'
 
 export type NavigatorProps = {
-  navigation: {navigate: any};
-  route: any;
+  navigation: { navigate: any }
+  route: any
 }
 function App(): JSX.Element {
 
   return (
     <SafeAreaProvider>
-      <RootNavigator />
+      <RecoilRoot>
+        <ThemeProvider>
+          <RootNavigator />
+        </ThemeProvider>
+      </RecoilRoot>
     </SafeAreaProvider>
   )
 }

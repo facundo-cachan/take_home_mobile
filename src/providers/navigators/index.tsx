@@ -1,28 +1,32 @@
-import { DefaultTheme, NavigationContainer } from '@react-navigation/native'
+import { useThemeProvider } from '@providers/theme/theme-provider'
+import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import { Fragment } from 'react'
+import { Fragment, useEffect } from 'react'
 
 import HomeStack from './HomeStack'
 
 export const { Navigator, Screen, Group } = createNativeStackNavigator()
 
 const RootNavigator = (): JSX.Element => {
-  const theme = DefaultTheme
+  const { theme } = useThemeProvider()
+
+  useEffect(() => {
+    console.log('RootNavigator theme changed')
+  }, [theme.dark])
 
   const onReady = () => {
-    console.log('RootNavigator is ready');
-
+    console.log('RootNavigator is ready')
   }
 
   return (<NavigationContainer theme={theme} onReady={onReady}>
-    <Navigator>
-      {
-        [HomeStack].map((Module, i: number) => (
-          <Fragment key={i}>{Module()}</Fragment>
-        ))
-      }
-    </Navigator>
-  </NavigationContainer>)
+      <Navigator>
+        {
+          [HomeStack].map((Module, i: number) => (
+            <Fragment key={i}>{Module()}</Fragment>
+          ))
+        }
+      </Navigator>
+    </NavigationContainer>)
 
 }
 
