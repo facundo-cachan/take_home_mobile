@@ -22,7 +22,8 @@ const rootHeaderRight = () => {
       <Icon name="whatsapp" size={iconSize} color={text} onPress={whatsapp} />
       <ButtonWithoutFeedback style={
         { marginHorizontal: iconSize + (iconSize / 2), color: text }}
-        icon={isDark ? 'moon-o' : 'sun-o'} iconSize={iconSize} onPress={toggleSwitch} />
+        icon={isDark ? 'moon-o' : 'sun-o'} iconSize={iconSize}
+        onPress={toggleSwitch} />
     </View>
   )
 }
