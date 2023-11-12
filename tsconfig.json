@@ -17,6 +17,9 @@
       "@hooks/*": [
         "src/hooks/*"
       ],
+      "@providers/*": [
+        "src/providers/*"
+      ],
       "@screens/*": [
         "src/screens/*"
       ],

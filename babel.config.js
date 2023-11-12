@@ -13,6 +13,7 @@ module.exports = {
           '@assets': './src/assets',
           '@components': './src/components',
           '@hooks': './src/hooks',
+          '@providers': './src/providers',
           '@screens': './src/screens',
           '@services': './src/services',
           '@utils': './src/utils'
