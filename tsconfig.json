@@ -5,8 +5,14 @@
     "outDir": "./build",
     "baseUrl": ".",
     "paths": {
+      "@/": [
+        "src/"
+      ],
       "@assets/*": [
         "src/assets/*"
+      ],
+      "@components": [
+        "src/components"
       ],
       "@hooks/*": [
         "src/hooks/*"
@@ -16,6 +22,9 @@
       ],
       "@services/*": [
         "src/services/*"
+      ],
+      "@utils/*": [
+        "src/utils/*"
       ],
       "@env": ["node_modules/react-native-dotenv"]
     },
