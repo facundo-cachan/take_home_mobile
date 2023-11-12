@@ -9,10 +9,13 @@ module.exports = {
       'module-resolver',
       {
         alias: {
+          '@/': './src/',
           '@assets': './src/assets',
+          '@components': './src/components',
           '@hooks': './src/hooks',
           '@screens': './src/screens',
-          '@services': './src/services'
+          '@services': './src/services',
+          '@utils': './src/utils'
         }
       }
     ]
