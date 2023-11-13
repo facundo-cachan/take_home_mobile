@@ -1,5 +1,21 @@
 This is a **Take Home Challenge** project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
+## Preview
+
+## Theme Light
+
+### Portrait Mode
+<img alt="Portrait Mode" src="https://github.com/facundo-cachan/take_home_mobile/assets/29696243/4e0d47eb-326f-4906-96ec-ae13dd17db47" width="33%" />
+
+### Landscape Mode
+<img alt="Landscape Mode" src="https://github.com/facundo-cachan/take_home_mobile/assets/29696243/62e76f65-d125-4d3a-b4e6-673c6583670f" />
+
+## Theme Dark
+
+### Landscape Mode
+<img alt="Landscape Mode" src="https://github.com/facundo-cachan/take_home_mobile/assets/29696243/510aef4f-bc52-4168-b0ab-62a8f5f6e5cf" />
+
+
 # Getting Started
 
 >**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
